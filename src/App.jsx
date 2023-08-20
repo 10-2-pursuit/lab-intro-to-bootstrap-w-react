@@ -1,4 +1,3 @@
-import "./App.css";
 // importing post data
 import postData from "./data/posts.json";
 
@@ -14,7 +13,7 @@ function App() {
   return (
     <main>
       <Nav />
-      <Header class="script-font" />
+      <Header />
       <button className="btn">hi</button>
     </main>
   );

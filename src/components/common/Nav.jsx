@@ -3,7 +3,7 @@ import React from 'react';
 const Nav = () => {
     return (
         <nav>
-            <p>Here is the NAV bar</p>
+            <p>Travel <span className="script-font" >Blog</span></p>
         </nav>
     );
 }
