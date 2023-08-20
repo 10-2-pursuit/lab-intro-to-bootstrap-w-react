@@ -7,6 +7,8 @@ import images from "./images";
 //Components
 import Nav from "./components/common/Nav";
 import Header from "./components/common/Header";
+import Posts from "./components/posts/Posts";
+import Footer from "./components/common/Footer";
 
 function App() {
   console.log(postData);
@@ -14,7 +16,8 @@ function App() {
     <main>
       <Nav />
       <Header />
-      <button className="btn">hi</button>
+      <Posts />
+      <Footer />
     </main>
   );
 }
