@@ -4,6 +4,22 @@
   font-family: "Great Vibes", cursive;
 }
 
+.orange {
+  color: orange
+}
+
+.backgroundOrange {
+  background-color: orange;
+}
+
 .post-image-height {
   height: 250px;
+}
+
+
+.Post {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50%
 }
