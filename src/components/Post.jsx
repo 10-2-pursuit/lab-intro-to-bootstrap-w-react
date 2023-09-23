@@ -21,10 +21,10 @@ const Post = ({postInfo}) => {
             className='card'>
             <img 
                 className='post-image-height'
-                src={`../src/images/${imgMap[postInfo.location]}.jpg`} 
+                src={`/src/images/${imgMap[postInfo.location]}.jpg`} 
                 alt="" />
             <div className='card-body d-flexbox'>
-                <h5 class>{postInfo.title}</h5>
+                <h5>{postInfo.title}</h5>
                 <h6>{postInfo.location}</h6>
                 <p className='Post'>{postInfo.content}</p>
                 <div className="d-flex justify-content-end">
