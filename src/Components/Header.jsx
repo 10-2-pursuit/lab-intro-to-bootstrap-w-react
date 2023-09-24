@@ -1,10 +1,17 @@
 import React from 'react';
 
-export default function Header() {
-    return (
-        <div className="script-font">
-            <p className="text-center">Travel is the only thing you buy that makes you richer...</p>
-        </div>
-        
-    )
-}
+const Header = () => {
+  return (
+    <header>
+      <nav>
+        <div className="logo">Travel Blog</div>
+        <ul>
+          <li><a href="#">Popular Posts</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
