@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import "../index.css"; // Import the CSS file
 
 const Header = ({ handlePopularPostsClick, handleHidePopularPosts }) => {
   return (
     <header className="header">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-  <h1 style={{ color: 'black', fontWeight: 'bold', fontFamily: 'new Times Roman', marginRight: '0px', paddingRight: '0px' }}>
-    Travel
-  </h1>
-  <h1 style={{ color: 'orange', fontWeight: 'bold', fontFamily: 'Great Vibes, Cursive', marginLeft: '0px', paddingLeft: '0px' }}>
-    Blog
-  </h1>
-</Link>
+        <Link className="navbar-brand" to="/">
+          <h1 className="title-dark">Travel</h1>
+          <h1 className="title-orange">Blog</h1>
+        </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" onClick={handleHidePopularPosts}>
+              <NavLink
+                className="nav-link"
+                to="/"
+                onClick={handleHidePopularPosts}
+              >
                 Home
               </NavLink>
             </li>

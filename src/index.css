@@ -79,6 +79,7 @@ Header {
     justify-content: space-between;
     margin-right: 50px;
   }
+
 .post {
   margin: 20px;
   padding: 20px;
@@ -128,24 +129,11 @@ Header {
   margin-right: 0; /* Adjust the margin as needed */
 }
 
-.form-label, .form-control, button {
-  display: inline-block;
-  margin-right: 5 px;
-}
 
 body .header {
   background-color: rgb(225, 225, 222)
 }
 
-label .form-label {
-  color: black;
-  border: none;
-  display: inline-block;
-  text-justify: center;
-  text-align: center;
-  vertical-align: middle;
-  font-style: italic ;
-}
 
 .header {
   border-style: none;
@@ -154,6 +142,118 @@ label .form-label {
 .traveling-quotes {
   border-style: none;
 }
+
+ .search-bar-container {
+  align-content: center;
+  padding: 10px;
+  margin: 10px 5px 10px 5px;
+  display: inline-flex;
+}
+
+ .form-control {
+  margin: 10px;
+  width: 900px;
+  vertical-align: center;
+}
+
+.form-label {
+  margin: 5px;
+  font-style: italic;
+  vertical-align: center;
+}
+
+.post-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.aspect-ratio-container {
+  position: relative;
+  padding-top: 75%;
+}
+
+.aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-body-content {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: transparent;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.title-dark {
+  color: black;
+  font-weight: bold;
+  font-family: 'new Times Roman';
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.title-orange {
+  color: orange;
+  font-weight: bold;
+  font-family: 'Great Vibes', Cursive;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.sidebar {
+  margin-top: 30px;
+}
+
+.text-dark {
+  color: black;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.table-borderless {
+  border: none;
+}
+
+.location-item {
+  font-weight: bold;
+  text-align: left;
+}
+
+.orange-box {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: orange;
+}
+
 
 @media (max-width: 767px) {
   .traveling-quotes {
@@ -168,12 +268,12 @@ label .form-label {
     display: flex;
     flex-direction: column-reverse; 
   }
-  
+
   .sidebar {
     margin-top: 20px; 
   }
 
-.foo.footer ul, .footer p {
+.footer ul, .footer p {
   display: block;
 }
   }

@@ -1,14 +1,14 @@
-// Sidebar.js
 import React from 'react';
+import '../index.css'; // Import the CSS file
 
-const Sidebar = ({locationCounts}) => {
+const Sidebar = ({ locationCounts }) => {
   return (
     <div className="sidebar">
       <h4>
         <span className="text-dark">Posts by </span>
-        <span style={{ color: 'orange' }}>Location</span>
+        <span className="text-orange">Location</span>
       </h4>
-      <table className="table table-borderless"> {/* Use Bootstrap table classes */}
+      <table className="table table-borderless">
         <thead>
           <tr>
             <th>Location</th>
@@ -19,10 +19,10 @@ const Sidebar = ({locationCounts}) => {
           {Object.entries(locationCounts).map(([location, count]) => (
             <tr key={location}>
               <td>
-                <span style={{ fontWeight: 'bold' }}>{location}</span> {/* Add bold text decoration to location */}
+                <span className="location-item">{location}</span>
               </td>
               <td>
-                <div className="orange-box">{count}</div> {/* Add an orange filled box around the count */}
+                <div className="orange-box">{count}</div>
               </td>
             </tr>
           ))}
