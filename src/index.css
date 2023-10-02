@@ -154,3 +154,26 @@ label .form-label {
 .traveling-quotes {
   border-style: none;
 }
+
+@media (max-width: 767px) {
+  .traveling-quotes {
+    display: none;
+  }
+
+  .container-fluid {
+    display: none;
+  }
+
+  .post-container {
+    display: flex;
+    flex-direction: column-reverse; 
+  }
+  
+  .sidebar {
+    margin-top: 20px; 
+  }
+
+.foo.footer ul, .footer p {
+  display: block;
+}
+  }
