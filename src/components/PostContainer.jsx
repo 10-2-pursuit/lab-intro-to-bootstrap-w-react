@@ -32,7 +32,7 @@ const PostContainer = ({ posts }) => {
   };
 
   return (
-    <div>
+    <div className="post-container">
       {displayPopularPosts ? (
         // Render popular posts
         <div className="post">

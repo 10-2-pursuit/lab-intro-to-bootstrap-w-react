@@ -46,7 +46,7 @@ function App() {
 
   const handleSearch = (event) => {
     const searchQuery = event.target.value ? event.target.value.toLowerCase() : '';
-
+  
     const filteredPosts = posts.filter((post) => {
       const { title, location, content } = post;
       return (
@@ -55,15 +55,16 @@ function App() {
         content.toLowerCase().includes(searchQuery)
       );
     });
-
+  
     setSearchQuery(searchQuery);
-    setFilteredPosts(filteredPosts);
-
+  
     if (filteredPosts.length === 0) {
       console.log(`No posts found with the search term "${searchQuery}"`);
     }
+  
+    setFilteredPosts(filteredPosts);
   };
-
+  
   const handlePopularPostClick = (postId) => {
     if (!popularPosts.includes(postId)) {
       setPopularPosts((prevPopularPosts) => [...prevPopularPosts, postId]);
@@ -168,6 +169,11 @@ function App() {
                   <Sidebar locationCounts={locationCounts} />
                 </div>
               </div>
+              {filteredPosts.length === 0 &&searchQuery.length > 0 && (
+                <div className="alert alert-warning mt-3" style={{ textAlign: 'center', color: 'red' }}>
+                No posts found with the search term "{searchQuery}" were found.
+                </div>
+                  )}
             </div>
           </main>
         </div>

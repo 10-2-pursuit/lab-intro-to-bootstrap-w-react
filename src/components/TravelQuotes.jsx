@@ -27,7 +27,7 @@ const TravelingQuotes = () => {
           <Col>
             {randomQuote && (
               <Card>
-                <Card.Body>
+                <Card.Body className="text-center">
                   <Card.Text className='quote'>{randomQuote.quote}</Card.Text>
                   <Card.Text className="text-muted">- {randomQuote.author}</Card.Text>
                 </Card.Body>

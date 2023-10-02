@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = ({ handlePopularPostsClick, handleHidePopularPosts }) => {
   return (
-    <header>
+    <header className="header">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
   <h1 style={{ color: 'black', fontWeight: 'bold', fontFamily: 'new Times Roman', marginRight: '0px', paddingRight: '0px' }}>
