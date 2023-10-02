@@ -10,16 +10,16 @@ import sevilla from "./Sevilla.jpg";
 import shibuya from "./shibuya.jpg";
 
 const images = {
-  burano: burano,
-  chicago: chicago,
-  dubai: dubai,
-  london: london,
-  porto: porto,
-  san_diego: san_diego,
-  san_francisco: san_francisco,
-  seattle: seattle,
-  sevilla: sevilla,
-  shibuya: shibuya,
+  Burano: burano,
+  Chicago: chicago,
+  Dubai: dubai,
+  London: london,
+  Porto: porto,
+  San_Diego: san_diego,
+  San_Francisco: san_francisco,
+  Seattle: seattle,
+  Sevilla: sevilla,
+  Shibuya: shibuya,
 };
 
 export default images;
