@@ -10,12 +10,16 @@
 
 .quote {
   font-style: italic;
-  font-size: 24px;
+  font-size: 40px;
   color: #4b4b4b;
   margin: 0;
   padding: 20;
   text-align: center;
 font-family: "Great Vibes", cursive;
+background-image: url('../docs/quotes_background.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+
 }
 
 .text-muted { 
@@ -27,16 +31,16 @@ font-family: verdana;
   text-align: right;
 padding-right: 30px;}
 
-.traveling-quotes {
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url="../docs/quotes_background.jpg";
+.text-center {
+  background-image: url('../docs/quotes_background.jpg');
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 .sidebar {
 
-  padding-top: 55px;
+  padding-top: 80px;
+  margin-left: 60px;
 }
 
 .sidebar tr td {
@@ -45,7 +49,108 @@ padding-right: 30px;}
   margin-right: 60px;
 }
 
-.search-label .input-group button {
+.d-flex label input button{
+  display: inline-flexbox;
+  width: 1400 px;
+  flex: 1 auto
+}
+
+.sidebar tr {
+  border-bottom: ipx solid orange;
+}
+
+header h1 {
+  padding-right: 50px;
   display: inline-block;
+}
+
+Header {
+
+  margin-left: 250px;
+}
+
+.sidebar tr {
+  /* Add orange border bottom to each row */
+    border-bottom: 2px solid orange;
+  }
+
+  /* Increase space between Location and Posts columns */
+  .sidebar thead { 
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+.post {
+  margin: 20px;
+  padding: 20px;
+}
+
+.container-sidebar {
+  width: 400px;
+}
+
+.footer {
+  background-color: orange;
+  height: 100px;
   width: 100%;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: block;
+  padding-bottom: 20px;
+  margin-left: 65%;
+}
+
+.footer ul, .footer p {
+  display: inline-block;
+  padding: 40px;
+  text-align: left;
+}
+
+.card-title {
+  width : 100%;
+}
+
+.orange-box {
+  background-color: orange;
+  color: white;
+  padding: 5px 5px;
+  /*Adjustpaddingasneeded*/border-radius: 1px;
+  /*Adjustborderradiusasneeded*/text-align: center;
+   /* Center the text horizontally */
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+
+.navbar-brand h1 h1 {
+  margin-right: 0; /* Adjust the margin as needed */
+}
+
+.form-label, .form-control, button {
+  display: inline-block;
+  margin-right: 5 px;
+}
+
+body .header {
+  background-color: rgb(225, 225, 222)
+}
+
+label .form-label {
+  color: black;
+  border: none;
+  display: inline-block;
+  text-justify: center;
+  text-align: center;
+  vertical-align: middle;
+  font-style: italic ;
+}
+
+.header {
+  border-style: none;
+}
+
+.traveling-quotes {
+  border-style: none;
 }

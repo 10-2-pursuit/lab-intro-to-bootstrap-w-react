@@ -1,13 +1,13 @@
-import burano from "../images/burano.jpg";
-import chicago from "../images/chicago.jpg";
-import dubai from "../images/dubai.jpg";
-import london from "../images/london.jpg";
-import porto from "../images/porto.jpg";
-import sanDiego from "../images/san_diego.jpg";
-import sanFrancisco from "../images/san_francisco.jpg";
-import seattle from "../images/seattle.jpg";
-import sevilla from "../images/sevilla.jpg";
-import shibuya from "../images/shibuya.jpg";
+import burano from "./Burano.jpg";
+import chicago from "./Chicago.jpg";
+import dubai from "./Dubai.jpg";
+import london from "./London.jpg";
+import porto from "./Porto.jpg";
+import san_diego from "./san_diego.jpg";
+import san_francisco from "./san_francisco.jpg";
+import seattle from "./seattle.jpg";
+import sevilla from "./Sevilla.jpg";
+import shibuya from "./shibuya.jpg";
 
 const images = {
   burano: burano,
@@ -15,8 +15,8 @@ const images = {
   dubai: dubai,
   london: london,
   porto: porto,
-  san_diego: sanDiego,
-  san_francisco: sanFrancisco,
+  san_diego: san_diego,
+  san_francisco: san_francisco,
   seattle: seattle,
   sevilla: sevilla,
   shibuya: shibuya,

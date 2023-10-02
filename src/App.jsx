@@ -5,7 +5,6 @@ import PostContainer from './components/PostContainer';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
 import postsData from './data/posts.json';
-import images from './images/index.js';
 import TravelQuotes from './components/TravelQuotes';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About';
@@ -46,19 +45,25 @@ function App() {
   };
 
   const handleSearch = (event) => {
-    const query = event.target.value ? event.target.value.toLowerCase() : ''; // Check if event.target.value is defined
-    const filtered = posts.filter((post) => {
+    const searchQuery = event.target.value ? event.target.value.toLowerCase() : '';
+
+    const filteredPosts = posts.filter((post) => {
       const { title, location, content } = post;
       return (
-        title.toLowerCase().includes(query) ||
-        location.toLowerCase().includes(query) ||
-        content.toLowerCase().includes(query)
+        title.toLowerCase().includes(searchQuery) ||
+        location.toLowerCase().includes(searchQuery) ||
+        content.toLowerCase().includes(searchQuery)
       );
     });
-    setSearchQuery(query);
-    setFilteredPosts(filtered);
+
+    setSearchQuery(searchQuery);
+    setFilteredPosts(filteredPosts);
+
+    if (filteredPosts.length === 0) {
+      console.log(`No posts found with the search term "${searchQuery}"`);
+    }
   };
-  
+
   const handlePopularPostClick = (postId) => {
     if (!popularPosts.includes(postId)) {
       setPopularPosts((prevPopularPosts) => [...prevPopularPosts, postId]);
@@ -92,7 +97,8 @@ function App() {
   const onReadLessClick = () => {
     setExpanded(false);
   };
-function renderContent(post) {
+
+  function renderContent(post) {
     return expanded ? post.content : post.content.substring(0, 150);
   }
 
@@ -127,7 +133,11 @@ function renderContent(post) {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-8">
-                  <SearchBar handleSearch={handleSearch} />
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <SearchBar handleSearch={handleSearch} />
+                    </div>
+                  </div>
                   <div className="row">
                     <div className="col-lg-6">
                       {filteredPosts &&

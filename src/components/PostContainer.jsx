@@ -1,3 +1,4 @@
+// PostContainer.jsx
 import React, { useState } from "react";
 import Post from "./Post";
 
@@ -34,7 +35,7 @@ const PostContainer = ({ posts }) => {
     <div>
       {displayPopularPosts ? (
         // Render popular posts
-        <div>
+        <div className="post">
           {getPopularPosts().map((post) => (
             <Post
               key={post.id}
@@ -47,7 +48,7 @@ const PostContainer = ({ posts }) => {
       ) : (
         // Render all posts if `posts` is defined
         posts && posts.length > 0 ? (
-          <div>
+          <div className="posts">
             {posts.map((post) => (
               <Post
                 key={post.id}
@@ -59,7 +60,7 @@ const PostContainer = ({ posts }) => {
           </div>
         ) : (
           // Render a loading indicator or message if `posts` is not defined
-          <div>Loading...</div>
+          <div></div>
         )
       )}
     </div>

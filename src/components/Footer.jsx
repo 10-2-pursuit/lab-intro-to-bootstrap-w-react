@@ -3,16 +3,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='footer'>
       <ul>
-        <li>
+        <li className='contact-me'>
           <a href="#">Contact me</a>
         </li>
-        <li>
+        <li className='about-the-author'>
           <a href="#">About the author</a>
         </li>
       </ul>
-      <p>&copy; {new Date().getFullYear()} Your Website Name</p>
+      <p className='date'>&copy; {new Date().getFullYear()} TravelBlog</p>
     </footer>
   );
 };
