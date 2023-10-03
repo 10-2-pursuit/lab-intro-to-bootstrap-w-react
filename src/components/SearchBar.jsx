@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../index.css'; // Import the CSS file
-
+import { Container, Row, Col, Card } from 'react-bootstrap';
 const SearchBar = ({ handleSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -15,32 +15,30 @@ const SearchBar = ({ handleSearch }) => {
     handleSearch({ target: { value: newQuery } });
   };
 
-  return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-12">
-          <label htmlFor="search" className="form-label">
-            Search posts for location...
-          </label>
-        </div>
-        <div className="col-m-3">
-          <div className="input-group">
-            <input
-              id="search"
-              className="form-control"
-              type="text"
-              placeholder="Search by title, location, or content..."
-              value={searchQuery}
-              onChange={handleChange}
-            />
-            <button className="btn btn-danger" onClick={cancelSearch}>
-              Cancel
-            </button>
+  
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="d-flex"> {/* Use Bootstrap d-flex class for flex layout */}
+              <label htmlFor="search" className="search-label">Search posts for location...</label>
+              <input
+                id="search"
+                className="search form-control flex-grow-1" // Use Bootstrap form-control and flex-grow-1 class
+                type="text"
+                placeholder="Search by title, location, or content"
+                value={searchQuery}
+                onChange={handleChange}
+              />
+              <button className="cancel-button btn btn-danger" onClick={cancelSearch}>
+                Cancel
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default SearchBar;
+    );
+  };
+  
+  export default SearchBar;
+  

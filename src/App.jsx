@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import PopularPosts from './components/PopularPosts';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './index.css'; 
 function App() {
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [locationCounts, setLocationCounts] = useState({});
