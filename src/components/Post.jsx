@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
-import images from '../images'; // Import the images module
+import burano from "../images/Burano.jpg";
+import chicago from "../images/Chicago.jpg";
+import dubai from "../images/Dubai.jpg";
+import london from "../images/London.jpg";
+import porto from "../images/Porto.jpg";
+import san_diego from "../images/san_diego.jpg";
+import san_francisco from "../images/san_francisco.jpg";
+import seattle from "../images/seattle.jpg";
+import sevilla from "../images/Sevilla.jpg";
+import shibuya from "../images/shibuya.jpg";
 import '../index.css'; // Import the CSS file
+import { Button, Card, Container } from 'react-bootstrap';
 
 const Post = ({ post, onReadMoreClick, onReadLessClick }) => {
   const [expanded, setExpanded] = useState(false);

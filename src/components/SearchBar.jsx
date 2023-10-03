@@ -19,10 +19,12 @@ const SearchBar = ({ handleSearch }) => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-12">
-          <div className="search-bar-container">
-            <label htmlFor="search" className="form-label">
-              Search posts for location...
-            </label>
+          <label htmlFor="search" className="form-label">
+            Search posts for location...
+          </label>
+        </div>
+        <div className="col-m-3">
+          <div className="input-group">
             <input
               id="search"
               className="form-control"
