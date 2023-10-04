@@ -20,7 +20,7 @@ const SearchBar = ({ handleSearch }) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
-            <div className="d-flex"> {/* Use Bootstrap d-flex class for flex layout */}
+            <div className="d-flex" style={{width: '1000px', verticalAlign: 'center', justifyContent: 'center', margin: '20px 5px 20px 5px'}}> {/* Use Bootstrap d-flex class for flex layout */}
               <label htmlFor="search" className="search-label">Search posts for location...</label>
               <input
                 id="search"
