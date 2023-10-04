@@ -11,7 +11,16 @@ import About from './components/About';
 import PopularPosts from './components/PopularPosts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Import your custom CSS
-
+import burano from "./images/Burano.jpg";
+import chicago from "../images/Chicago.jpg";
+import dubai from "./images/Dubai.jpg";
+import london from "./images/London.jpg";
+import porto from "./images/Porto.jpg";
+import san_diego from "./images/san_diego.jpg";
+import san_francisco from "./images/san_francisco.jpg";
+import seattle from "./images/seattle.jpg";
+import sevilla from "./images/Sevilla.jpg";
+import shibuya from "./images/shibuya.jpg";
 function App() {
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [locationCounts, setLocationCounts] = useState({});
