@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import PostContainer from './components/PostContainer';
-import Sidebar from './components/SideBar';
+import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import postsData from './data/posts.json';
 import TravelQuotes from './components/TravelQuotes';
@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import PopularPosts from './components/PopularPosts';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'; 
+import './index.css'; // Import your custom CSS
+
 function App() {
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [locationCounts, setLocationCounts] = useState({});
@@ -46,7 +47,7 @@ function App() {
 
   const handleSearch = (event) => {
     const searchQuery = event.target.value ? event.target.value.toLowerCase() : '';
-  
+
     const filteredPosts = posts.filter((post) => {
       const { title, location, content } = post;
       return (
@@ -55,16 +56,16 @@ function App() {
         content.toLowerCase().includes(searchQuery)
       );
     });
-  
+
     setSearchQuery(searchQuery);
-  
+
     if (filteredPosts.length === 0) {
       console.log(`No posts found with the search term "${searchQuery}"`);
     }
-  
+
     setFilteredPosts(filteredPosts);
   };
-  
+
   const handlePopularPostClick = (postId) => {
     if (!popularPosts.includes(postId)) {
       setPopularPosts((prevPopularPosts) => [...prevPopularPosts, postId]);
@@ -92,7 +93,7 @@ function App() {
           : post
       )
     );
-    setExpanded(expanded);
+    setExpanded(!expanded); // Toggle expanded state
   };
 
   const onReadLessClick = () => {
@@ -169,11 +170,11 @@ function App() {
                   <Sidebar locationCounts={locationCounts} />
                 </div>
               </div>
-              {filteredPosts.length === 0 &&searchQuery.length > 0 && (
+              {filteredPosts.length === 0 && searchQuery.length > 0 && (
                 <div className="alert alert-warning mt-3" style={{ textAlign: 'center', color: 'red' }}>
-                No posts found with the search term "{searchQuery}" were found.
+                  No posts found with the search term "{searchQuery}" were found.
                 </div>
-                  )}
+              )}
             </div>
           </main>
         </div>

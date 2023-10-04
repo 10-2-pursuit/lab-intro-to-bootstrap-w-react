@@ -37,7 +37,7 @@ const Post = ({ post, onReadMoreClick, onReadLessClick }) => {
           <div className="aspect-ratio-content">
             {/* Use the imported images */}
             <Card.Img
-              src={`../src/images/${post.location.toLowerCase()}.jpg`}
+              src={`${post.location}`.toLowerCase()}
               alt={post.location}
               className="card-image"
             />
