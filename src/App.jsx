@@ -21,6 +21,7 @@ import san_francisco from "./images/san_francisco.jpg";
 import seattle from "./images/seattle.jpg";
 import sevilla from "./images/Sevilla.jpg";
 import shibuya from "./images/shibuya.jpg";
+import images from './images/';
 
 function App() {
   const [filteredPosts, setFilteredPosts] = useState([]);

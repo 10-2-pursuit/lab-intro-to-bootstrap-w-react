@@ -11,6 +11,7 @@ import sevilla from "../images/Sevilla.jpg";
 import shibuya from "../images/shibuya.jpg";
 import '../index.css'; // Import the CSS file
 import { Button, Card, Container } from 'react-bootstrap';
+import images from '../images/';
 
 const Post = ({ post, onReadMoreClick, onReadLessClick }) => {
   const [expanded, setExpanded] = useState(false);
@@ -37,7 +38,7 @@ const Post = ({ post, onReadMoreClick, onReadLessClick }) => {
           <div className="aspect-ratio-content">
             {/* Use the imported images */}
             <Card.Img
-              src={`${post.location}`.toLowerCase()}
+              src={`${ images [post.location] }`}
               alt={post.location}
               className="card-image"
             />
