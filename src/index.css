@@ -7,3 +7,301 @@
 .post-image-height {
   height: 250px;
 }
+
+.quote {
+  font-style: italic;
+  font-size: 40px;
+  color: #4b4b4b;
+  margin: 0;
+  padding: 20;
+  text-align: center;
+font-family: "Great Vibes", cursive;
+background-image: url('../docs/quotes_background.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+
+}
+
+.text-muted { 
+  color: #4b4b4b;
+font-family: verdana;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 9px;
+  text-align: right;
+padding-right: 30px;}
+
+.text-center {
+  background-image: url('../docs/quotes_background.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.sidebar {
+
+  padding-top: 80px;
+  margin-left: 60px;
+}
+
+.sidebar tr td {
+  padding: 10px;
+  justify-content: space-between;
+  margin-right: 60px;
+}
+
+.d-flex label input button{
+  display: inline-flexbox;
+  width: 1400 px;
+  flex: 1 auto
+}
+
+.sidebar tr {
+  border-bottom: ipx solid orange;
+}
+
+header h1 {
+  padding-right: 50px;
+  display: inline-block;
+}
+
+Header {
+
+  margin-left: 250px;
+}
+
+.sidebar tr {
+  /* Add orange border bottom to each row */
+    border-bottom: 2px solid orange;
+  }
+
+  /* Increase space between Location and Posts columns */
+  .sidebar thead { 
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+
+.post {
+  margin: 20px;
+  padding: 20px;
+}
+
+.container-sidebar {
+  width: 400px;
+}
+
+.footer {
+  background-color: orange;
+  height: 100px;
+  width: 100%;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: block;
+  padding-bottom: 20px;
+  margin-left: 65%;
+}
+
+.footer ul, .footer p {
+  display: inline-block;
+  padding: 40px;
+  text-align: left;
+}
+
+.card-title {
+  width : 100%;
+}
+
+.orange-box {
+  background-color: orange;
+  color: white;
+  padding: 5px 5px;
+  /*Adjustpaddingasneeded*/border-radius: 1px;
+  /*Adjustborderradiusasneeded*/text-align: center;
+   /* Center the text horizontally */
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+
+.navbar-brand h1 h1 {
+  margin-right: 0; /* Adjust the margin as needed */
+}
+
+
+body .header {
+  background-color: rgb(225, 225, 222)
+}
+
+
+.header {
+  border-style: none;
+}
+
+.traveling-quotes {
+  border-style: none;
+}
+
+.post-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.aspect-ratio-container {
+  position: relative;
+  padding-top: 75%;
+}
+
+.aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-body-content {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: transparent;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.title-dark {
+  color: black;
+  font-weight: bold;
+  font-family: 'new Times Roman';
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.title-orange {
+  color: orange;
+  font-weight: bold;
+  font-family: 'Great Vibes', Cursive;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.sidebar {
+  margin-top: 20px;
+}
+
+.text-dark {
+  color: black;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.table-borderless {
+  border: none;
+}
+
+.location-item {
+  font-weight: bold;
+  text-align: left;
+}
+
+.orange-box {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: orange;
+}
+
+.d-flex {
+  display: inline-block;
+  width: 800 px;
+  flex-grow : 1;
+}
+
+#search {
+ width: 500 px;
+}
+
+.search-label {
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  display: inline-block;
+  width: 500px; /* Adjust the width as needed */
+  padding: 5px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-row {
+  width: 920px;
+}
+
+.form-control {
+  display: inline-block;
+  width: 500px; /* Adjust the width as needed */
+  padding: 5px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+}
+
+
+@media (max-width: 767px) {
+  .traveling-quotes {
+    display: none;
+  }
+
+  .container-fluid {
+    display: none;
+  }
+
+  .post-container {
+    display: flex;
+    flex-direction: column-reverse; 
+  }
+
+  .sidebar {
+    margin-top: 20px; 
+  }
+
+.footer ul, .footer p {
+  display: block;
+}
+  }
