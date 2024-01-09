@@ -1,11 +1,28 @@
+import Aside from "./components/Aside";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import PostList from "./components/PostList";
+import SearchBar from "./components/SearchBar";
+
 import postData from "./data/posts.json";
 
 function App() {
-  console.log(postData);
   return (
-    <main>
-      <button className="btn">hi</button>
-    </main>
+    <>
+      <header>
+        <Nav />
+        <Header />
+        <SearchBar />
+      </header>
+      <main>
+        <PostList />
+        <Aside />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
 
