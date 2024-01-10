@@ -4,19 +4,21 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import PostList from "./components/PostList";
 import SearchBar from "./components/SearchBar";
-
-import postData from "./data/posts.json";
+import posts from "./data/posts.json";
+import { useState } from "react";
 
 function App() {
+  const [filteredPosts, setFilteredPosts] = useState(posts);
+
   return (
     <>
       <header>
         <Nav />
         <Header />
-        <SearchBar />
+        <SearchBar setFilteredPosts={setFilteredPosts} />
       </header>
       <main>
-        <PostList />
+        <PostList filteredPosts={filteredPosts} />
         <Aside />
       </main>
       <footer>
