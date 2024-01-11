@@ -2,11 +2,10 @@ import React from "react";
 import { useState } from "react";
 import posts from "../data/posts.json";
 
-const SearchBar = ({ setFilteredPosts }) => {
-  // const [searchTitle, setSearchTitle] = useState("")
-  // const [error, setError] = useState(false);
-  // const [posts, setPosts] = useState(PostList());
-  // const [allPosts, setAllPosts] = useState(PostList());
+const SearchBar = ({ filteredPosts, setFilteredPosts }) => {
+  const [searchTitle, setSearchTitle] = useState("");
+  const [error, setError] = useState(false);
+
   const filterPosts = (search) => {
     return posts.filter(
       (post) =>
@@ -16,12 +15,23 @@ const SearchBar = ({ setFilteredPosts }) => {
   };
 
   const handleOnChange = (e) => {
-    console.log(e.target.value);
     const inputTitle = e.target.value;
     const result = inputTitle.length ? filterPosts(inputTitle) : posts;
     setFilteredPosts(result);
-    // setSearchTitle(inputTitle);
+    setSearchTitle(inputTitle);
   };
+
+  // filteredPosts.length ? setError(false) : setError(true);
+
+  const showError = () =>
+    filteredPosts.length
+      ? setError(false)
+      : setError(true) && (
+          <div className="alert alert-danger" role="alert">
+            `No search found with the search term "{searchTitle}". Please try
+            again.`
+          </div>
+        );
 
   return (
     <div>
@@ -30,21 +40,18 @@ const SearchBar = ({ setFilteredPosts }) => {
         <input
           className="form-control me-2 mt-3 col-sm"
           type="text"
-          // value={searchTitle}
+          value={searchTitle}
           id="searchTitle"
           onChange={handleOnChange}
         />
-        {/* <button
-          onClick={setSearchTitle("")}
+        <button
+          onClick={() => setSearchTitle("")}
           className="btn btn-warning mt-3"
-          type="cancel"
         >
           Cancel
-        </button> */}
+        </button>
       </div>
-      <div className="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
-      </div>
+      {showError}
     </div>
   );
 };
